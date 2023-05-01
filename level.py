@@ -3,6 +3,7 @@ from settings import *
 from tile import Tile
 from player import Player
 
+# Contiene los elementos que va a tener el juego y sus interacciones
 
 class Level:
 	def __init__(self):
@@ -22,10 +23,11 @@ class Level:
 			for col_index, col in enumerate(row):
 				x = col_index * TILESIZE
 				y = row_index * TILESIZE
+				# Colocando sprites
 				if col == 'x':
-					Tile((x,y),[self.visible_sprites,self.obstacle_sprites])
+					Tile((x, y), [self.visible_sprites, self.obstacle_sprites])
 				if col == 'p':
-					Player((x,y),[self.visible_sprites])
+					Player((x, y), [self.visible_sprites])
 
 	def run(self):
 		# update and draw the game
