@@ -9,10 +9,10 @@ class Game:
         # general setup
         pygame.init()
         self.screen = pygame.display.set_mode((WIDTH, HEIGTH))
-        pygame.display.set_caption('Zelda')
+        pygame.display.set_caption('The Lord')
         self.clock = pygame.time.Clock()
-        probando = "test1"
-        self.level = Level()
+        #probando = "test1"
+        #self.level = Level()
 
     def run(self):
         while True:
@@ -22,7 +22,7 @@ class Game:
                     sys.exit()
 
             self.screen.fill('black')
-            self.level.run()
+            #self.level.run()
             pygame.display.update()
             self.clock.tick(FPS)
 

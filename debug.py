@@ -1,5 +1,6 @@
 import pygame
 
+# Nos va a dar información de lo que está pasando en el juego (no hacer mucho caso)
 pygame.init()
 font = pygame.font.Font(None, 30)
 
