@@ -24,7 +24,7 @@ class Game:
                     if event.key == pygame.K_m: # m --> menu
                         self.level.toggle_menu()
 
-            self.screen.fill('black')
+            self.screen.fill(WATER_COLOR) # rellena el mapa de agua para que no haya negro
             self.level.run()
             pygame.display.update()
             self.clock.tick(FPS)
