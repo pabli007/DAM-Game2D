@@ -21,10 +21,10 @@ class Game:
                     pygame.quit()
                     sys.exit()
                 if event.type == pygame.KEYDOWN:
-                    if event.key == pygame.K_m: # m --> menu
+                    if event.key == pygame.K_m:  # m --> menu
                         self.level.toggle_menu()
 
-            self.screen.fill(WATER_COLOR) # rellena el mapa de agua para que no haya negro
+            self.screen.fill(WATER_COLOR)  # rellena el mapa de agua para que no haya negro
             self.level.run()
             pygame.display.update()
             self.clock.tick(FPS)

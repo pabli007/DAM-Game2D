@@ -2,6 +2,16 @@ import pygame
 from support import import_folder
 from random import choice
 
+
+def reflect_images(frames):
+    new_frames = []
+
+    for frame in frames:
+        flipped_frame = pygame.transform.flip(frame, True, False)
+        new_frames.append(flipped_frame)
+    return new_frames
+
+
 class AnimationPlayer:
     def __init__(self):
         self.frames = {
@@ -31,22 +41,14 @@ class AnimationPlayer:
                 import_folder('../graphics/particles/leaf4'),
                 import_folder('../graphics/particles/leaf5'),
                 import_folder('../graphics/particles/leaf6'),
-                self.reflect_images(import_folder('../graphics/particles/leaf1')),
-                self.reflect_images(import_folder('../graphics/particles/leaf2')),
-                self.reflect_images(import_folder('../graphics/particles/leaf3')),
-                self.reflect_images(import_folder('../graphics/particles/leaf4')),
-                self.reflect_images(import_folder('../graphics/particles/leaf5')),
-                self.reflect_images(import_folder('../graphics/particles/leaf6'))
+                reflect_images(import_folder('../graphics/particles/leaf1')),
+                reflect_images(import_folder('../graphics/particles/leaf2')),
+                reflect_images(import_folder('../graphics/particles/leaf3')),
+                reflect_images(import_folder('../graphics/particles/leaf4')),
+                reflect_images(import_folder('../graphics/particles/leaf5')),
+                reflect_images(import_folder('../graphics/particles/leaf6'))
             )
         }
-
-    def reflect_images(self, frames):
-        new_frames = []
-
-        for frame in frames:
-            flipped_frame = pygame.transform.flip(frame, True, False)
-            new_frames.append(flipped_frame)
-        return new_frames
 
     def create_grass_particles(self, pos, groups):
         animation_frames = choice(self.frames['leaf'])
