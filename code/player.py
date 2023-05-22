@@ -43,7 +43,7 @@ class Player(Entity):
         self.upgrade_cost = {'health': 100, 'energy': 100, 'attack': 100, 'magic': 100, 'speed': 100}
         self.health = self.stats['health'] * 0.5
         self.energy = self.stats['energy'] * 0.8
-        self.exp = 50
+        self.exp = 5000
         self.speed = self.stats['speed']
 
         # damage timer
@@ -122,6 +122,8 @@ class Player(Entity):
                 self.magic = list(magic_data.keys())[self.magic_index]
 
     def get_status(self):
+
+        # idle status
         if self.direction.x == 0 and self.direction.y == 0:
             if not 'idle' in self.status and not 'attack' in self.status:
                 self.status = self.status + '_idle'
@@ -177,8 +179,6 @@ class Player(Entity):
         else:
             self.image.set_alpha(255)
 
-
-
     def get_full_weapon_damage(self):
         base_damage = self.stats['attack']
         weapon_damage = weapon_data[self.weapon]['damage']
@@ -188,6 +188,12 @@ class Player(Entity):
         base_damage = self.stats['magic']
         spell_damage = magic_data[self.magic]['strength']
         return base_damage + spell_damage
+
+    def get_value_by_index(self, index):
+        return list(self.stats.values())[index]
+
+    def get_cost_by_index(self, index):
+        return list(self.upgrade_cost.values())[index]
 
     def energy_recovery(self):
         if self.energy < self.stats['energy']:
@@ -200,5 +206,5 @@ class Player(Entity):
         self.cooldowns()
         self.get_status()
         self.animate()
-        self.move(self.speed)
+        self.move(self.stats['speed'])
         self.energy_recovery()
