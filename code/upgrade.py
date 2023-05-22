@@ -1,11 +1,9 @@
 import pygame
 from settings import *
 
-
 class Upgrade:
     def __init__(self, player):
-
-        # general setup
+        # general setupp
         self.display_surface = pygame.display.get_surface()
         self.player = player
         self.attribute_nr = len(player.stats)
