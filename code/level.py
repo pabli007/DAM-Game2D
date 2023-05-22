@@ -12,6 +12,7 @@ from particles import AnimationPlayer
 from magic import MagicPlayer
 from upgrade import Upgrade
 
+
 # Contiene los elementos que va a tener el juego y sus interacciones
 
 class Level:
@@ -64,7 +65,8 @@ class Level:
                             Tile((x, y), [self.obstacle_sprites], 'invisible')
                         if style == 'grass':
                             random_grass_image = choice(graphics['grass'])
-                            Tile((x, y), [self.visible_sprites, self.obstacle_sprites, self.attackable_sprites], 'grass', random_grass_image)
+                            Tile((x, y), [self.visible_sprites, self.obstacle_sprites, self.attackable_sprites],
+                                 'grass', random_grass_image)
 
                         if style == 'object':
                             surf = graphics['objects'][int(col)]
@@ -98,7 +100,7 @@ class Level:
                                     self.add_exp)
 
     def create_attack(self):
-        self.current_attack = Weapon(self.player,[self.visible_sprites,self.attack_sprites])
+        self.current_attack = Weapon(self.player, [self.visible_sprites, self.attack_sprites])
 
     def create_magic(self, style, strength, cost):
         if style == 'heal':
@@ -153,6 +155,7 @@ class Level:
             self.visible_sprites.update()
             self.visible_sprites.enemy_update(self.player)
             self.player_attack_logic()
+
 
 class YSortCameraGroup(pygame.sprite.Group):
     def __init__(self):
