@@ -5,6 +5,7 @@ from settings import *
 class Upgrade:
     def __init__(self, player):
         # general setupp
+        self.item_list = None
         self.display_surface = pygame.display.get_surface()
         self.player = player
         self.attribute_nr = len(player.stats)
