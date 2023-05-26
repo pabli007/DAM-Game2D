@@ -14,6 +14,11 @@ class Game:
 
         self.level = Level()
 
+        # load icon
+        new_icon = pygame.image.load('../graphics/icon.png')
+        pygame.display.set_icon(new_icon)
+
+        # load music
         main_sound = pygame.mixer.Sound('../audio/main.ogg')
         main_sound.play(loops= -1 )
         main_sound.set_volume(0.5)
