@@ -3,7 +3,6 @@ from settings import *
 from tile import Tile
 from player import Player
 from support import *
-from debug import debug
 from random import choice, randint
 from weapon import Weapon
 from ui import UI
