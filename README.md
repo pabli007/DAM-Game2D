@@ -4,13 +4,13 @@ El principal objetivo de este proyecto es aprender a utilizar un nuevo lenguaje 
 y para ello he desarrollado un juego utilizando la librería Pygame.
 
 
-## Dependencies :vertical_traffic_light:
+## Dependencias :vertical_traffic_light:
 Las dependencias son principalmente bibliotecas python y el uso correcto de las mismas. <br />
 
 
-### Software dependencies
+### Software utilizado
 * PYCHARM <br />
-PyCharm es un entorno de desarrollo integrado utilizado en programación informática, concretamente para el lenguaje de programación Python. Está desarrollado por la empresa checa JetBrains.
+Pycharm es un entorno de desarrollo integrado utilizado en programación informática, concretamente para el lenguaje de programación Python. Está desarrollado por la empresa checa JetBrains.
 ```
 https://www.jetbrains.com/es-es/pycharm/
 ```
@@ -24,13 +24,12 @@ https://www.python.org/
 
 
 
-### Libraries and Package dependencies
+### Librerias
 * PYGAME <br />
 Pygame es un conjunto de módulos del lenguaje Python que permiten la creación de videojuegos en dos dimensiones de una manera sencilla.
 ```
 https://docs.python.org/3/library/tkinter.html
 ```
-
 
 * PYINSTALLER <br />
 PyInstaller es un programa que convierte los programas de Python en ejecutables
@@ -39,12 +38,5 @@ https://www.pyinstaller.org/
 ```
 
 
-## Usage :pencil2:
-All projects are really well commented and most of them have specifications and remarks for their purpose.
-
-I will be uploading most of the files, and try to keep it as clean as possible.
-
-
-
-## Author :musical_keyboard:
+## Autor :musical_keyboard:
 Pablo Ladrón Ordoyo
