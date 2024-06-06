@@ -37,6 +37,3 @@ PyInstaller es un programa que convierte los programas de Python en ejecutables
 https://www.pyinstaller.org/
 ```
 
-
-## Autor :musical_keyboard:
-Pablo Ladrón Ordoyo
